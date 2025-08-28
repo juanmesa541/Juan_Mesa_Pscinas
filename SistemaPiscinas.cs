@@ -2,14 +2,12 @@ using System;
 
 namespace SistemaPiscinas
 {
-    // Enumeraciones básicas
     public enum TipoAgua { Dulce, Salada, Clorada }
     public enum EstadoPiscina { Disponible, Ocupada, Mantenimiento }
     public enum EstadoReserva { Pendiente, Confirmada, Cancelada }
     public enum TipoCliente { Regular, Premium }
     public enum TipoMantenimiento { Limpieza, Reparacion, Revision }
 
-    // Clase Piscina
     public class Piscina
     {
         public int Id { get; set; }
@@ -54,7 +52,6 @@ namespace SistemaPiscinas
         }
     }
 
-    // Clase Cliente
     public class Cliente
     {
         public int Id { get; set; }
@@ -105,7 +102,6 @@ namespace SistemaPiscinas
         }
     }
 
-    // Clase Reserva
     public class Reserva
     {
         public int Id { get; set; }
@@ -177,7 +173,6 @@ namespace SistemaPiscinas
         }
     }
 
-    // Clase Mantenimiento
     public class Mantenimiento
     {
         public int Id { get; set; }
@@ -251,7 +246,6 @@ namespace SistemaPiscinas
         }
     }
 
-    // Programa principal
     class Program
     {
         static void Main(string[] args)

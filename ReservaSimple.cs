@@ -4,12 +4,11 @@ namespace SistemaPiscinas
 {
     public class Reserva
     {
-        // Atributos básicos
         public int Id { get; set; }
         public Cliente Cliente { get; set; }
         public Piscina Piscina { get; set; }
         public DateTime Fecha { get; set; }
-        public int HoraInicio { get; set; } // Hora en formato 24h (ej: 14 para las 2pm)
+        public int HoraInicio { get; set; } 
         public int HoraFin { get; set; }
         public int NumeroPersonas { get; set; }
         public double Precio { get; set; }
@@ -32,17 +31,17 @@ namespace SistemaPiscinas
         // Método para calcular precio
         public double CalcularPrecio()
         {
-            double precioBase = 20.0; // $20 por hora
+            double precioBase = 20.0; 
             int horas = HoraFin - HoraInicio;
             double total = precioBase * horas;
 
             // Descuento para menores
             if (Cliente.EsMenor())
-                total = total * 0.8; // 20% descuento
+                total = total * 0.8; 
 
             // Recargo para premium
             if (Cliente.Tipo == TipoCliente.Premium)
-                total = total * 1.2; // 20% recargo
+                total = total * 1.2; 
 
             return total;
         }
